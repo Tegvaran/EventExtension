@@ -1,1 +1,1 @@
-console.log("Extension is working!")
+console.log("Extension working!")
