@@ -1,10 +1,11 @@
 {
-    "name": "Event Extension",
+    "name": "Open Extension API reference",
     "description" : "An extension to let users add events to their calendar from IG browser app",
-    "version" : "0.1",
+    "version" : "1.0",
     "manifest_version": 3,
-    "action" : {
-        "default_popup": "eventExtension.html",
-        "default_icon": "icon.png"
+    "icons" : {
+        "16": "images/icon-16.png",
+        "128": "images/icon-128.png"
+
     }
 }
