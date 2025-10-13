@@ -12,5 +12,9 @@
         "service_worker": "service-worker.js",
         "type": "module"
     },
-    "permissions": ["storage"]
+    "permissions": ["storage"],
+    "minimum_chrome_version" :"102",
+    "omnibox": {
+        "keyword": "api"
+    }
 }
