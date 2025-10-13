@@ -1,5 +1,5 @@
 const extensions = "https://developer.chrome.com/docs/extensions";
-const webstore = "https://developer.chrome.come/docs/webstore"
+const webstore = "https://developer.chrome.com/docs/webstore"
 
 
 // Adds the text "OFF" (Could be anything here) on the chome extension
