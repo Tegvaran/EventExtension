@@ -10,7 +10,7 @@ chrome.runtime.onInstalled.addListener(() => {
     });
 });
 
-chrome.action.OnClicked.addListener( async (tab) => {
+chrome.action.onClicked.addListener( async (tab) => {
     if (tab.url.startsWith(extensions) || tab.url.startsWith(webstore)) {
         
         // Get the action button badge to check if the extension is 'ON' or 'OFF'
@@ -24,5 +24,22 @@ chrome.action.OnClicked.addListener( async (tab) => {
             tabId: tab.id,
             text: nextState,
         });
+
+        if (nextState === "ON") {
+
+            // Insert the CSS file when the user turns the extension on.
+            await chrome.scripting.insertCSS({
+                files: ["focus-mode.css"],
+                target: {tabId: tab.id},
+            });
+
+        } else if (nextState === "OFF") {
+
+            // Remove the CSS file when the user turns the extension off.
+            await chrome.scripting.removeCSS({
+                files: ["focus-mode.css"],
+                target: {tabId: tab.id}
+            });
+        }
     }
 });
